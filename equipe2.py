@@ -3,11 +3,13 @@
     um caractere maiúsculo e um minúsculo,além de conter números e letras, bem como contenha no minimo 4
     e no maximo 8
 '''
+
+
 def verifsenha(senha):
     numeros = False
     maiusculo = False
     minusculo = False
-    if len(senha)  >= 4 and len(senha) <= 8:
+    if len(senha) >= 4 and len(senha) <= 8:
         if senha.lower() != senha:
             minusculo = True
         else:
@@ -15,7 +17,7 @@ def verifsenha(senha):
         if senha.upper() != senha:
             maiusculo = True
         else:
-            print('senha não contém letras maiúsculas')    
+            print('senha não contém letras maiúsculas')
         for letra in senha:
             if letra.isnumeric():
                 numeros = True
@@ -24,10 +26,13 @@ def verifsenha(senha):
         if maiusculo and minusculo and numeros:
             print('senha segura')
         else:
-            print('senha sem números')
+            print('senha nao é segura')
+    else:
+        print('Senha com tamanho invalido')
+
 
 while True:
-    senha = input('digite uma senha: ') 
-    verifsenha(senha)
+    senha = input('digite uma senha: ')
     if senha == 'sair':
-        break            
+        break
+    verifsenha(senha)
