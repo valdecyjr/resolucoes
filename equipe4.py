@@ -3,12 +3,13 @@
     unidades de milhar o numero tem, e repita enquanto o usuario nao digitar um numero inteiro
 '''
 
+
 def contar_unidades(n):
     numero = n
     dic = {}
     if numero >= 1000:
-        dic['unidade de milhar']= numero//1000
-        numero -= 1000 * dic['unidade de milhar'] 
+        dic['unidade de milhar'] = numero//1000
+        numero -= 1000 * dic['unidade de milhar']
     if numero >= 100:
         dic['centenas'] = numero//100
         numero -= 100 * dic['centenas']

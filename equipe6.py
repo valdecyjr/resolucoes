@@ -17,7 +17,7 @@ def orgequipe(alunos):
             equipe2.append(alunos[numero])
 
         print(f'Equipe1: {equipe1}')
-        print(f'Equipe2: {equipe2}') 
+        print(f'Equipe2: {equipe2}')
     else:
         print('Não é possivel dividir de forma igual')
 alunos = []
